@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.0"
 
     defaultConfig {
-        applicationId "com.mattermost.mattermost"
+        applicationId "net.opentrends.mattermost"
         minSdkVersion 17
 
         /* If you want to change targetSdkVersion to higher version, please make sure you

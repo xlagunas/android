@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mattermost.mattermost">
+    package="net.opentrends.mattermost">
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -30,9 +30,9 @@
     <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
 
     <permission
-        android:name="com.mattermost.mattermost.permission.C2D_MESSAGE"
+        android:name="net.opentrends.mattermost.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
-    <uses-permission android:name="com.mattermost.mattermost.permission.C2D_MESSAGE" />
+    <uses-permission android:name="net.opentrends.mattermost.permission.C2D_MESSAGE" />
 
     <application
         android:name=".MattermostApplication"
@@ -84,12 +84,12 @@
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <!-- for Gingerbread GSF backward compat -->
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-                <category android:name="com.mattermost.mattermost" />
+                <category android:name="net.opentrends.mattermost" />
             </intent-filter>
         </receiver>
 
         <service
-            android:name="com.mattermost.gcm.GcmMessageHandler"
+            android:name="net.opentrends.gcm.GcmMessageHandler"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
@@ -97,12 +97,12 @@
         </service>
 
         <service
-            android:name="com.mattermost.gcm.RegistrationIntentService"
+            android:name="net.opentrends.gcm.RegistrationIntentService"
             android:exported="false">
         </service>
 
         <service
-            android:name="com.mattermost.gcm.GcmInstanceIDListener"
+            android:name="net.opentrends.gcm.GcmInstanceIDListener"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.android.gms.iid.InstanceID" />
